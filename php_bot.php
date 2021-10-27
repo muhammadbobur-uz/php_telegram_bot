@@ -42,13 +42,13 @@ $til = json_encode(
 
 $tel = "\u{1F4F1}" . " Raqam yuborish";
 $back = "\u{1F1FA}\u{1F1FF}" . " Tilni o'zagrtirish " . "\u{1F1F7}\u{1F1FA}";
-$telefon = json_encode(
-        array(
-            'KeyboardButton' => [['text'=>$tel,'request_contact'=>true], [$back]],
-            'resize_keyboard' => true,
-            'selective' => true,
-            'one_time_keyboard' => true,
-        ));
+
+$replyMarkup3 = [
+    'keyboard' => [[['text' => $tel, 'request_contact' => true,], ['text' => $back, 'request_contact' => false,]]],
+    'resize_keyboard' => true,
+    'one_time_keyboard' => true,
+];
+$encodeMarkup = json_encode($replyMarkup3);
 
 if ($text == "/start") {
     bot('sendMessage', [
@@ -68,7 +68,8 @@ if ($text == $t1) {
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
         'text' => "Телефон ра?амингизни *+998(--) --- -- -- *\nшаклда юборинг, ёки " . "\u{1F4F2}" . " Ра?ам юбориш\nтугмасини босинг",
-        'reply_markup' => $telefon,
+        'reply_markup' => $encodeMarkup,
+        'text' => 'keyin nima qilamiz',
     ]);
 }
 if ($text == $t2) {
@@ -77,7 +78,7 @@ if ($text == $t2) {
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
         'text' => "Телефон ра?амингизни *+998(--) --- -- -- *\nшаклда юборинг, ёки " . "\u{1F4F2}" . " Ра?ам юбориш\nтугмасини босинг",
-        'reply_markup' => $telefon,
+        'reply_markup' => $encodeMarkup,
     ]);
 }
 
@@ -87,7 +88,7 @@ if ($text == $t3) {
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
         'text' => "Telefon raqamingizni *+998(--) --- -- -- *\nshaklda yuboring, yoki " . "\u{1F4F2}" . " Raqam yuborish\ntugmasini bosing:",
-        'reply_markup' => $telefon,
+        'reply_markup' => $encodeMarkup,
     ]);
 }
 
@@ -98,14 +99,6 @@ if ($text == $back) {
         'parse_mode' => 'markdown',
         'text' => "*Qaytadan tilni tanlang..*",
         'reply_markup' => $til,
-    ]);
-}
-
-if ($text == $tel) {
-    bot('sendContact', [
-    'chat_id' => $chat_id,
-    'phone_number' => $contact,
-    'first_name' => $name
     ]);
 }
 ?>

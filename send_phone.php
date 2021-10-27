@@ -29,12 +29,13 @@ $data = $update->callback_query->data;
 
 
 $tel = "\u{1F4F1}" . " Raqam yuborish";
+$back = "\u{1F1FA}\u{1F1FF}" . " Tilni o'zagrtirish " . "\u{1F1F7}\u{1F1FA}";
 if ($text == "/start") {
     $replyMarkup3 =[
         'keyboard' =>[ [ [
             'text'=>'Raqam yuborish',
             'request_contact'=>true,
-        ]]],
+        ],[$back]]],
         'resize_keyboard'=>true,
         'one_time_keyboard'=>true,
     ];
@@ -44,8 +45,5 @@ if ($text == "/start") {
         'text' => $tel,
         'reply_markup' => $encodedMarkup,
     ]);
-
 }
-
-
 ?>
