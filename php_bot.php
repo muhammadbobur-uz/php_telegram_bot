@@ -3,7 +3,7 @@
 
 define('TOKEN', '2015393431:AAH5GBbVKBUCqWHAcdsPhiUdshtSb6__aMw');
 
-// https://api.telegram.org/bot2015393431:AAH5GBbVKBUCqWHAcdsPhiUdshtSb6__aMw/setwebhook?url=https://muhammadbobur.iproger.net/pythonbot/tgbot.php
+// https://api.telegram.org/botTOKEN/setwebhook?url=https://muhammadbobur.iproger.net/pythonbot/tgbot.php
 
 function bot($method, $datas = []) {
     $url = "https://api.telegram.org/bot" . TOKEN . "/$method";
@@ -29,8 +29,8 @@ $data = $update->callback_query->data;
 $contact = $messages->contact->phone_number;
 $location = $messages->location->longitude;
 
-$t1 = "\u{1F1FA}\u{1F1FF}" . " ¡çáåê÷à";
-$t2 = "\u{1F1F7}\u{1F1FA}" . " Ğóñêèé";
+$t1 = "\u{1F1FA}\u{1F1FF}" . " Â¡Ã§Ã¡Ã¥ÃªÃ·Ã ";
+$t2 = "\u{1F1F7}\u{1F1FA}" . " ÃÃ³Ã±ÃªÃ¨Ã©";
 $t3 = "\u{1F1FA}\u{1F1FF}" . " O'zbekcha";
 $til = json_encode(
         array(
@@ -55,9 +55,9 @@ if ($text == "/start") {
         'chat_id' => $chat_id,
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
-        'text' => "*Àññàëîìó àëàéêóì! Êåëèíã, àââàë õèçìàò ê¢ğñàòèø òèëèíè òàíëàá îëàéëèê.
+        'text' => "*Ã€Ã±Ã±Ã Ã«Ã®Ã¬Ã³ Ã Ã«Ã Ã©ÃªÃ³Ã¬! ÃŠÃ¥Ã«Ã¨Ã­Ã£, Ã Ã¢Ã¢Ã Ã« ÃµÃ¨Ã§Ã¬Ã Ã² ÃªÂ¢Ã°Ã±Ã Ã²Ã¨Ã¸ Ã²Ã¨Ã«Ã¨Ã­Ã¨ Ã²Ã Ã­Ã«Ã Ã¡ Ã®Ã«Ã Ã©Ã«Ã¨Ãª.
                               \n\n Assalomu alaykum ! Keling, avval xizmat ko'rsatish tilini tanlab olaylik.
-                              \n\n Çäğàñòâóéòå! Äàâàéòå äëÿ íà÷àëà âûáåğàåì ÿçûê îáñëóæèâàíèèÿ.*",
+                              \n\n Ã‡Ã¤Ã°Ã Ã±Ã²Ã¢Ã³Ã©Ã²Ã¥! Ã„Ã Ã¢Ã Ã©Ã²Ã¥ Ã¤Ã«Ã¿ Ã­Ã Ã·Ã Ã«Ã  Ã¢Ã»Ã¡Ã¥Ã°Ã Ã¥Ã¬ Ã¿Ã§Ã»Ãª Ã®Ã¡Ã±Ã«Ã³Ã¦Ã¨Ã¢Ã Ã­Ã¨Ã¨Ã¿.*",
         'reply_markup' => $til,
     ]);
 }
@@ -67,7 +67,7 @@ if ($text == $t1) {
         'chat_id' => $chat_id,
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
-        'text' => "Òåëåôîí ğà?àìèíãèçíè *+998(--) --- -- -- *\nøàêëäà şáîğèíã, ¸êè " . "\u{1F4F2}" . " Ğà?àì şáîğèø\nòóãìàñèíè áîñèíã",
+        'text' => "Ã’Ã¥Ã«Ã¥Ã´Ã®Ã­ Ã°Ã ?Ã Ã¬Ã¨Ã­Ã£Ã¨Ã§Ã­Ã¨ *+998(--) --- -- -- *\nÃ¸Ã ÃªÃ«Ã¤Ã  Ã¾Ã¡Ã®Ã°Ã¨Ã­Ã£, Â¸ÃªÃ¨ " . "\u{1F4F2}" . " ÃÃ ?Ã Ã¬ Ã¾Ã¡Ã®Ã°Ã¨Ã¸\nÃ²Ã³Ã£Ã¬Ã Ã±Ã¨Ã­Ã¨ Ã¡Ã®Ã±Ã¨Ã­Ã£",
         'reply_markup' => $encodeMarkup,
         'text' => 'keyin nima qilamiz',
     ]);
@@ -77,7 +77,7 @@ if ($text == $t2) {
         'chat_id' => $chat_id,
         'message_id' => $message_id,
         'parse_mode' => 'markdown',
-        'text' => "Òåëåôîí ğà?àìèíãèçíè *+998(--) --- -- -- *\nøàêëäà şáîğèíã, ¸êè " . "\u{1F4F2}" . " Ğà?àì şáîğèø\nòóãìàñèíè áîñèíã",
+        'text' => "Ã’Ã¥Ã«Ã¥Ã´Ã®Ã­ Ã°Ã ?Ã Ã¬Ã¨Ã­Ã£Ã¨Ã§Ã­Ã¨ *+998(--) --- -- -- *\nÃ¸Ã ÃªÃ«Ã¤Ã  Ã¾Ã¡Ã®Ã°Ã¨Ã­Ã£, Â¸ÃªÃ¨ " . "\u{1F4F2}" . " ÃÃ ?Ã Ã¬ Ã¾Ã¡Ã®Ã°Ã¨Ã¸\nÃ²Ã³Ã£Ã¬Ã Ã±Ã¨Ã­Ã¨ Ã¡Ã®Ã±Ã¨Ã­Ã£",
         'reply_markup' => $encodeMarkup,
     ]);
 }
