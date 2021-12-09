@@ -1,8 +1,8 @@
 <?php
 
-define('TOKEN', '2015393431:AAH5GBbVKBUCqWHAcdsPhiUdshtSb6__aMw');
+define('TOKEN', '2015393431:hgfwdgfcwahegfcagvejfgseuhr');
 
-// https://api.telegram.org/bot2015393431:AAH5GBbVKBUCqWHAcdsPhiUdshtSb6__aMw/setwebhook?url=https://muhammadbobur.iproger.net/pythonbot/tgbot.php
+// https://api.telegram.org/bot2015393431:hjdbfuaefsedrfsedhgfsehbrfuhse/setwebhook?url=https://muhammadbobur.iproger.net/pythonbot/tgbot.php
 
 function bot($method, $datas = []) {
     $url = "https://api.telegram.org/bot" . TOKEN . "/$method";
