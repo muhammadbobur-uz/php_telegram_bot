@@ -2,7 +2,7 @@
 
 ob_start();
 
-define('TOKEN', '2015393431:AAH5GBbVKBUCqWHAcdsPhiUdshtSb6__aMw');
+define('TOKEN', '126546163546516hjgdvsjfhgevjfgaevfhgkjhfiuye');
 
 function bot($method, $datas = []) {
     $url = "https://api.telegram.org/bot" . TOKEN . "/$method";
